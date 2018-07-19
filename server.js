@@ -28,7 +28,7 @@ var options11 = {
 
 request(options11, function (error, response, body) {
 console.log(body);
-res.render(sss);
+res.send(body);
 });
 }
   catch (e) {
