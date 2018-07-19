@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var router = _express2.default.Router();
 
-router.get('/get', function (req, res, next) {
+router.get('/hello', function (req, res, next) {
 try
 {
 console.log(irn);
