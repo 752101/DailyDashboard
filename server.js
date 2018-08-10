@@ -22,6 +22,7 @@ var options11 = {
  headers:  {
   'Content-Type': 'application/x-www-form-urlencoded',},
   'url': "https://lilly.service-now.com/report_viewer.do?"+boddy,
+  'xhrFields': { withCredentials: true },
   'data': "",
   'method': 'POST'
 }
