@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({
   extended: false,
 }));
 // compress all routes
-app.use(compression());
 //
 // // view engine setup and public static directory
 app.set('views', path.join(__dirname, 'views'));
