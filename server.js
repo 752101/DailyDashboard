@@ -8,6 +8,19 @@ var pgp = require('pg-promise')(/*options*/)
 var request = require("request");
 
 app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
+// compress all routes
+app.use(compression());
+//
+// // view engine setup and public static directory
+app.set('views', path.join(__dirname, 'views'));
+//app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', hbs.engine); 
+app.set('view engine', 'handlebars');
+app.use(express.static(path.join(__dirname, 'lib/public')));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
